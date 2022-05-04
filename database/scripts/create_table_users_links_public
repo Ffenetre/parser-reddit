@@ -1,0 +1,7 @@
+CREATE TABLE USERS_LINKS_PUBLIC (
+    uuid uuid default gen_random_uuid() primary key,
+    uuid_users uuid,
+    uuid_public uuid,
+    FOREIGN KEY (uuid_users) references USERS (uuid),
+    FOREIGN KEY (uuid_public) references PUBLIC (uuid)
+)

@@ -1,0 +1,8 @@
+CREATE TABLE PUBLIC
+(
+    uuid uuid default gen_random_uuid() primary key,
+    name CHAR(4000),
+    url  CHAR(4000)
+);
+
+COMMENT ON TABLE PUBLIC IS 'Table is public';

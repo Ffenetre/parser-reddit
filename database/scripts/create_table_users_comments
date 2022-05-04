@@ -1,0 +1,7 @@
+CREATE TABLE USERS_COMMENTS (
+    uuid uuid default gen_random_uuid() primary key,
+    uuid_users uuid,
+    create_date date,
+    like_post bigint,
+    FOREIGN KEY (uuid_users) references USERS (uuid)
+);

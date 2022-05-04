@@ -1,0 +1,7 @@
+CREATE TABLE USERS (
+    uuid uuid default gen_random_uuid() primary key,
+    name char(4000),
+    karma bigint,
+    like_comments bigint,
+    like_post bigint
+);

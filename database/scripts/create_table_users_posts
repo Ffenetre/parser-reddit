@@ -1,0 +1,10 @@
+CREATE TABLE POSTS_USERS (
+    uuid uuid default gen_random_uuid() primary key,
+    uuid_users uuid,
+    uuid_public uuid,
+    url CHAR(4000),
+    like_post bigint,
+    create_date date,
+    FOREIGN KEY (uuid_users) references USERS (uuid),
+    FOREIGN KEY (uuid_public) references public (uuid)
+);

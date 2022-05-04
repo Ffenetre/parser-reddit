@@ -1,0 +1,7 @@
+create or replace function generate_uuid() returns uuid as $$
+
+    begin
+    RETURN uuid_in(md5(random()::TEXT || clock_timestamp()::TEXT)::CSTRING);
+    end;
+
+    $$ LANGUAGE 'plpgsql';
